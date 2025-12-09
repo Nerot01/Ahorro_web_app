@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Ahorros [tu nombre] y [su nombre] 🐣</title>
+
+    <!-- React & ReactDOM -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Babel (for JSX) -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FDFBF7',
+                        'soft-pink': '#FFD1DC',
+                        lilac: '#E6E6FA',
+                        mint: '#CBF3D2',
+                        'text-gray': '#4A4A4A',
+                        'card-white': '#FFFFFF',
+                    },
+                    borderRadius: {
+                        'xl': '1.5rem',
+                        '2xl': '2rem',
+                    },
+                    fontFamily: {
+                        sans: ['Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Icons (Lucide) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Firebase (Global for simplicity in No-Build) -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics-compat.js"></script>
+
+    <style>
+        body {
+            background-color: #FDFBF7;
+            color: #4A4A4A;
+        }
+
+        /* Custom scrollbar for aesthetic feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #FDFBF7;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #FFD1DC;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #E6E6FA;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <!-- Application Scripts (Loaded sequentially) -->
+
+    <!-- 1. Firebase Configuration -->
+    <script type="text/babel" src="./src/firebase.js?v=2.3"></script>
+
+    <!-- 2. Components -->
+    <script type="text/babel" src="./src/components/PocketCard.js?v=2.3"></script>
+    <script type="text/babel" src="./src/components/GoalTracker.js?v=2.3"></script>
+    <script type="text/babel" src="./src/components/AddTransaction.js?v=2.3"></script>
+
+    <!-- 3. Main App -->
+    <script type="text/babel" src="./src/App.js?v=2.3"></script>
+</body>
+
+</html>

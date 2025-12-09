@@ -1,0 +1,19 @@
+# Exclude secrets
+src/firebase.js
+.firebaserc
+firebase.json
+
+# Exclude dependencies (if you ever use npm)
+node_modules/
+.env
+
+# Exclude system files
+.DS_Store
+Thumbs.db
+
+# Exclude build artifacts
+dist/
+build/
+
+# Local scripts
+*.bat
